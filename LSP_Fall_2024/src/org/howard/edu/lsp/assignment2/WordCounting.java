@@ -17,7 +17,7 @@ public class WordCounting {
 		
 		try {
 			//reading the words.txt file
-			reader = new BufferedReader(new FileReader("words.txt"));
+			reader = new BufferedReader(new FileReader("src/org/howard/edu/lsp/assignment2/words.txt"));
 			//removing any special characters on the first line of the text file
 			String currentLine = reader.readLine().replaceAll("[^a-zA-Z]", " ");
 						
