@@ -16,17 +16,22 @@ public class WordCounting {
 		
 		try {
 			reader = new BufferedReader(new FileReader("words.txt"));
-			String currentLine = reader.readLine();
-			
+			String currentLine = reader.readLine().replaceAll("[^a-zA-Z]", " ");
+						
 			while(currentLine != null) {
 				String words[] = currentLine.toLowerCase().split(" ");
+				//currentLine = reader.replaceAll("[^a-zA-Z]", "");
+				
 				
 				for(String word : words) {
-					
-					if(wordMap.containsKey(word)) {
-						wordMap.put(word, wordMap.get(word+1));
-					}else {
-						wordMap.put(word, 1);
+					//String word1 = word.replaceAll("[^a-zA-Z]", "");
+					if (!word.isBlank()) {
+						String word1 = word.replaceAll("[^a-zA-Z]", "");
+						if(wordMap.containsKey(word1)) {
+							wordMap.put(word1, wordMap.get(word1)+1);
+						}else {
+							wordMap.put(word1, 1);
+						}
 					}
 				}
 				currentLine = reader.readLine();
@@ -37,7 +42,14 @@ public class WordCounting {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+		finally {
+			try {
+				reader.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		wordMap.forEach((k, v) -> System.out.println(k + "  " + v));
 
 	}
 
