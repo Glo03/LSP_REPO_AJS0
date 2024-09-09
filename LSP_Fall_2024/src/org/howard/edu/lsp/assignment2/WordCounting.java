@@ -17,7 +17,7 @@ public class WordCounting {
 		
 		try {
 			//reading the words.txt file
-			reader = new BufferedReader(new FileReader("src/org/howard/edu/lsp/assignment2/words.txt"));
+			reader = new BufferedReader(new FileReader("words.txt"));
 			//removing any special characters on the first line of the text file
 			String currentLine = reader.readLine().replaceAll("[^a-zA-Z]", " ");
 						
@@ -33,7 +33,10 @@ public class WordCounting {
 					if (!word.isBlank()) {
 						//each word is being looked at to see if there's any special characters
 						String word1 = word.replaceAll("[^a-zA-Z]", "");
-						if(wordHash.containsKey(word1)) {
+						if(word1.length() <= 3) {
+							//System.out.println(word1.length());
+							word1 = word1.replace(word1, " ");
+						}else if(wordHash.containsKey(word1)) {
 							//if the word exist in the wordHash, then the count goes up.
 							wordHash.put(word1, wordHash.get(word1)+1);
 						}else {
