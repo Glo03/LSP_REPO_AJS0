@@ -2,6 +2,7 @@ package org.howard.edu.lsp.midterm.question1;
 
 /**
  * Represents a book with a title, author, ISBN, and year of publication.
+ * reference: https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
  */
 public class Book {
     private String title;

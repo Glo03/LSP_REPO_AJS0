@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * A simple voting machine using an ArrayList to manage candidates.
  * This class allows adding candidates, casting votes, and printing vote counts.
+ * reference: https://www.geeksforgeeks.org/arraylist-in-java/
  */
 public class VotingMachine {
     private List<Candidate> candidates;
