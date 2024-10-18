@@ -1,7 +1,7 @@
 package org.howard.edu.lsp.midterm.question1;
 
 /**
- * Represents a book with title, author, ISBN, and year of publication.
+ * Represents a book with a title, author, ISBN, and year of publication.
  */
 public class Book {
     private String title;
@@ -10,12 +10,12 @@ public class Book {
     private int yearPublished;
 
     /**
-     * Constructs a new Book with the specified details.
+     * Constructs a new Book with the specified title, author, ISBN, and year of publication.
      * 
-     * @param title          the title of the book
-     * @param author         the author of the book
-     * @param ISBN           the unique ISBN of the book
-     * @param yearPublished  the year the book was published
+     * @param title         the title of the book
+     * @param author        the author of the book
+     * @param ISBN          the unique ISBN identifier for the book
+     * @param yearPublished the year the book was published
      */
     public Book(String title, String author, String ISBN, int yearPublished) {
         this.title = title;
@@ -23,8 +23,6 @@ public class Book {
         this.ISBN = ISBN;
         this.yearPublished = yearPublished;
     }
-
-    // Getters and setters
 
     /**
      * Gets the title of the book.
@@ -44,8 +42,67 @@ public class Book {
         this.title = title;
     }
 
-    // More getters and setters for author, ISBN, yearPublished
+    /**
+     * Gets the author of the book.
+     * 
+     * @return the author of the book
+     */
+    public String getAuthor() {
+        return author;
+    }
 
+    /**
+     * Sets the author of the book.
+     * 
+     * @param author the new author of the book
+     */
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    /**
+     * Gets the ISBN of the book.
+     * 
+     * @return the ISBN of the book
+     */
+    public String getISBN() {
+        return ISBN;
+    }
+
+    /**
+     * Sets the ISBN of the book.
+     * 
+     * @param ISBN the new ISBN of the book
+     */
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    /**
+     * Gets the year the book was published.
+     * 
+     * @return the year the book was published
+     */
+    public int getYearPublished() {
+        return yearPublished;
+    }
+
+    /**
+     * Sets the year the book was published.
+     * 
+     * @param yearPublished the new year of publication
+     */
+    public void setYearPublished(int yearPublished) {
+        this.yearPublished = yearPublished;
+    }
+
+    /**
+     * Overrides the equals method to compare two Book objects.
+     * Two books are considered equal if they have the same ISBN and author.
+     * 
+     * @param obj the object to compare with
+     * @return true if the books have the same ISBN and author, false otherwise
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -58,8 +115,39 @@ public class Book {
         return this.ISBN.equals(other.ISBN) && this.author.equals(other.author);
     }
 
+    /**
+     * Returns a string representation of the Book object in the format:
+     * "Title: <title>, Author: <author>, ISBN: <ISBN>, Year Published: <yearPublished>"
+     * 
+     * @return a string representation of the book
+     */
     @Override
     public String toString() {
-        return "Title: " + title + " Author: " + author + " ISBN: " + ISBN + " Year Published: " + yearPublished;
+        return "Title: " + title + ", Author: " + author + ", ISBN: " + ISBN + ", Year Published: " + yearPublished;
+    }
+}
+
+/**
+ * BookDriver class to test the Book class by creating instances and comparing them.
+ */
+class BookDriver {
+
+    /**
+     * Main method to test the Book class functionalities.
+     * 
+     * @param args command-line arguments (not used)
+     */
+    public static void main(String[] args) {
+        // Creating Book objects
+        Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", "123456789", 1925);
+        Book book2 = new Book("The Great Gatsby", "F. Scott Fitzgerald", "123456789", 1925);
+        Book book3 = new Book("A Promised Land", "Barack Obama", "9780593239681", 2020);
+
+        // Testing equality between books
+        System.out.println(book1.equals(book2)); // true
+        System.out.println(book1.equals(book3)); // false
+
+        // Printing the string representation of book1
+        System.out.println(book1); // Output: Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 123456789, Year Published: 1925
     }
 }
