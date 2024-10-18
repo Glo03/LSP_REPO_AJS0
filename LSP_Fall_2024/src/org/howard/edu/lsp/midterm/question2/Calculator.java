@@ -2,6 +2,8 @@ package org.howard.edu.lsp.midterm.question2;
 
 /**
  * Utility class that provides methods to sum different types of numbers.
+ * This class contains overloaded sum() methods to handle integers, doubles,
+ * and arrays of integers.
  */
 public class Calculator {
 
@@ -19,8 +21,8 @@ public class Calculator {
     /**
      * Sums two double values.
      * 
-     * @param a the first double
-     * @param b the second double
+     * @param a the first double value
+     * @param b the second double value
      * @return the sum of the two double values
      */
     public static double sum(double a, double b) {
@@ -28,7 +30,7 @@ public class Calculator {
     }
 
     /**
-     * Sums all the elements in an array of integers.
+     * Sums all elements in an array of integers.
      * 
      * @param numbers the array of integers
      * @return the sum of all elements in the array
