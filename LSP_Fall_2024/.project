@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>LSP_Fall_2024</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/LSP_midterm(GD).doc</name>
+			<type>1</type>
+			<location>/Users/gloriadagrin/Desktop/Fall 2024/LSP/classwork/LSP_midterm(GD).doc</location>
+		</link>
+	</linkedResources>
+</projectDescription>
