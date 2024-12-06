@@ -26,7 +26,7 @@ public class CustomRandomNumberStrategy implements RandomNumberStrategy {
     @Override
     public int generateRandomNumber() {
         // Custom algorithm (e.g., a simple linear congruential generator)
-        seed = (seed * 6364136223846793005L + 1) & 0xFFFFFFFFFFFFFFFFL;
-        return (int)(seed >> 30) & 0x7FFFFFFF % 100 + 1;  // Random number between 1 and 100
+    	seed = (seed * 6364136223846793005L + 1) % 100;
+    	return (int)(seed % 100) + 1;  // Random number between 1 and 100
     }
 }
