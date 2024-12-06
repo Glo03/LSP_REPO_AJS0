@@ -5,6 +5,9 @@ package org.howard.edu.lsp.finalexam.question2;
  * invokes the service for different random number generation algorithms and displays
  * the results to the screen.
  */
+
+//Got ChatGPT to help me solve this question 2: https://chatgpt.com/c/67525537-8788-8003-9186-9cd9679ae14f
+//use https://www.geeksforgeeks.org/generating-random-numbers-in-java/
 public class RandomNumberClient {
 
     /**
