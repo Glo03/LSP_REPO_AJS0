@@ -5,6 +5,8 @@ package org.howard.edu.lsp.finalexam.question2;
  * This strategy generates random numbers in the range of 1 to 100 using a simple
  * linear congruential generator.
  */
+
+//Used ChatGPT to help me fix my code: https://chatgpt.com/c/67525486-24b4-8003-8541-40ce0e8e4e2b
 public class CustomRandomNumberStrategy implements RandomNumberStrategy {
 
     private long seed;
